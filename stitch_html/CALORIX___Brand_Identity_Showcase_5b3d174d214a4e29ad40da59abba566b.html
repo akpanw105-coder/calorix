@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALORIX Identity Systems</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            headline: ['Space Grotesk', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            surface: {
+              DEFAULT: '#f9f9ff',
+              container: '#ffffff',
+              muted: '#f1f5f9',
+              dark: '#0f172a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-headline {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-16">
+
+  <!-- Top App Navigation / Header -->
+  <header class="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-slate-100 px-5 py-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center shadow-sm shadow-brand-500/20 text-white font-headline font-bold text-base">
+          C
+        </div>
+        <div>
+          <h1 class="text-xs font-semibold uppercase tracking-wider text-brand-600">Brand Guidelines v2.4</h1>
+          <p class="font-headline text-base font-bold text-slate-900 leading-tight">CALORIX Identity Systems</p>
+        </div>
+      </div>
+      <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-medium bg-brand-50 text-brand-700 border border-brand-200">
+        3 Production Concepts
+      </span>
+    </div>
+  </header>
+
+  <main class="max-w-md mx-auto px-4 pt-5 space-y-6">
+
+    <!-- Hero Section: Executive Brand Summary -->
+    <section class="bg-gradient-to-br from-emerald-950 via-slate-900 to-slate-950 text-white rounded-3xl p-6 shadow-xl relative overflow-hidden">
+      <!-- Decorative radial glows -->
+      <div class="absolute -right-12 -top-12 w-48 h-48 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-12 -bottom-12 w-48 h-48 bg-teal-500/15 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="relative z-10 space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-[11px] font-medium text-emerald-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Intelligent Nutrition &amp; Bio-Telemetry
+        </div>
+        
+        <h2 class="font-headline text-2xl font-bold tracking-tight text-white leading-snug">
+          CALORIX Visual Identity Direction
+        </h2>
+        
+        <p class="text-xs leading-relaxed text-slate-300">
+          Executive design system showcase calibrating modern health technology, cellular nutrition, and kinetic bio-metrics. Engineered for instant mobile recognition across dark and light surfaces.
+        </p>
+
+        <!-- Brand Pillars Pills -->
+        <div class="pt-2 flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 bg-white/10 hover:bg-white/15 backdrop-blur-sm rounded-lg text-[11px] font-medium text-slate-200 border border-white/10">Precision</span>
+          <span class="px-2.5 py-1 bg-white/10 hover:bg-white/15 backdrop-blur-sm rounded-lg text-[11px] font-medium text-slate-200 border border-white/10">Metabolic Energy</span>
+          <span class="px-2.5 py-1 bg-white/10 hover:bg-white/15 backdrop-blur-sm rounded-lg text-[11px] font-medium text-slate-200 border border-white/10">Equilibrium</span>
+          <span class="px-2.5 py-1 bg-white/10 hover:bg-white/15 backdrop-blur-sm rounded-lg text-[11px] font-medium text-slate-200 border border-white/10">AI Telemetry</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION TITLE -->
+    <div class="flex items-center justify-between px-1">
+      <h3 class="font-headline text-sm font-bold tracking-wide uppercase text-slate-500">Logo System Explorations</h3>
+      <span class="text-xs text-slate-400">Tap variants to inspect</span>
+    </div>
+
+    <!-- CARD 1: Concept 1 — The Bio-Arc -->
+    <article class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+      <div class="flex items-start justify-between">
+        <div>
+          <span class="inline-block text-[11px] font-semibold uppercase text-brand-600 bg-brand-50 px-2 py-0.5 rounded-md">Concept 01</span>
+          <h4 class="font-headline text-lg font-bold text-slate-900 mt-1">The Bio-Arc</h4>
+          <p class="text-xs text-slate-500">Dynamic Metabolic Kinetic Balance</p>
+        </div>
+        <span class="px-2 py-1 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">
+          Active In App
+        </span>
+      </div>
+
+      <p class="text-xs text-slate-600 leading-relaxed">
+        An interconnected dual-arc loop expressing continuous calorie intake vs. metabolic burn. The open vortex symbolizes dynamic homeostasis and precision progress rings.
+      </p>
+
+      <!-- Logo Display Grid -->
+      <div class="grid grid-cols-2 gap-3 pt-1">
+        <!-- Full Color on Light -->
+        <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center space-y-2">
+          <div class="w-14 h-14 flex items-center justify-center">
+            <!-- Bio-Arc SVG -->
+            <svg viewBox="0 0 48 48" class="w-12 h-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="20" stroke="#E2E8F0" stroke-width="4" stroke-dasharray="2 4"/>
+              <path d="M12 24C12 17.3726 17.3726 12 24 12C30.6274 12 36 17.3726 36 24" stroke="url(#arc-grad-1)" stroke-width="4.5" stroke-linecap="round"/>
+              <path d="M36 24C36 30.6274 30.6274 36 24 36C18.5 36 14 32.5 12.6 28" stroke="#10B981" stroke-width="4.5" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="5" fill="#059669"/>
+              <defs>
+                <linearGradient id="arc-grad-1" x1="12" y1="12" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#06B6D4"/>
+                  <stop offset="1" stop-color="#10B981"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div>
+            <div class="font-headline font-bold text-sm tracking-tight text-slate-900">CALORIX<span class="text-brand-500">●</span></div>
+            <span class="text-[10px] text-slate-400">Full Color Mark</span>
+          </div>
+        </div>
+
+        <!-- Dark Surface State -->
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center text-center space-y-2">
+          <div class="w-14 h-14 flex items-center justify-center">
+            <svg viewBox="0 0 48 48" class="w-12 h-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="20" stroke="#1E293B" stroke-width="4" stroke-dasharray="2 4"/>
+              <path d="M12 24C12 17.3726 17.3726 12 24 12C30.6274 12 36 17.3726 36 24" stroke="url(#arc-grad-dark)" stroke-width="4.5" stroke-linecap="round"/>
+              <path d="M36 24C36 30.6274 30.6274 36 24 36C18.5 36 14 32.5 12.6 28" stroke="#34D399" stroke-width="4.5" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="5" fill="#10B981"/>
+              <defs>
+                <linearGradient id="arc-grad-dark" x1="12" y1="12" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#38BDF8"/>
+                  <stop offset="1" stop-color="#34D399"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div>
+            <div class="font-headline font-bold text-sm tracking-tight text-white">CALORIX<span class="text-emerald-400">●</span></div>
+            <span class="text-[10px] text-slate-400">OLED Dark Mark</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- App Icon & Monochrome Preview -->
+      <div class="bg-slate-50/70 border border-slate-100 rounded-2xl p-3 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <!-- iOS App Icon Preview -->
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 p-2 shadow-md shadow-emerald-600/25 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a9 9 0 1 0 9 9"></path>
+              <circle cx="12" cy="12" r="3" fill="currentColor"></circle>
+              <path d="M18 9l3-3-3-3"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-800">iOS / Android App Icon</div>
+            <div class="text-[11px] text-slate-400">1024×1024 Adaptive Master</div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <!-- Monochrome Light Badge -->
+          <div class="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-900 text-xs font-bold shadow-2xs">
+            M
+          </div>
+          <!-- Monochrome Dark Badge -->
+          <div class="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center text-xs font-bold">
+            M
+          </div>
+        </div>
+      </div>
+
+      <!-- Specs Footer -->
+      <div class="grid grid-cols-3 gap-2 pt-1 border-t border-slate-100 text-[11px] text-slate-500">
+        <div><span class="font-semibold text-slate-700">Weight:</span> 4.5px Opt</div>
+        <div><span class="font-semibold text-slate-700">Radius:</span> 24pt Circ</div>
+        <div><span class="font-semibold text-slate-700">Font:</span> Space Grotesk</div>
+      </div>
+    </article>
+
+    <!-- CARD 2: Concept 2 — The Caloric Meridian -->
+    <article class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+      <div class="flex items-start justify-between">
+        <div>
+          <span class="inline-block text-[11px] font-semibold uppercase text-brand-600 bg-brand-50 px-2 py-0.5 rounded-md">Concept 02</span>
+          <h4 class="font-headline text-lg font-bold text-slate-900 mt-1">The Caloric Meridian</h4>
+          <p class="text-xs text-slate-500">Four-Quadrant Bio-Precision</p>
+        </div>
+        <span class="px-2 py-1 rounded-full text-[10px] font-medium bg-slate-100 text-slate-600">
+          Alternative
+        </span>
+      </div>
+
+      <p class="text-xs text-slate-600 leading-relaxed">
+        Structured four-quadrant matrix representing the primary biometric pillars: Protein, Carbohydrates, Lipids, and Active Hydration anchored around a central metabolic focus.
+      </p>
+
+      <!-- Logo Display Grid -->
+      <div class="grid grid-cols-2 gap-3 pt-1">
+        <!-- Full Color on Light -->
+        <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center space-y-2">
+          <div class="w-14 h-14 flex items-center justify-center">
+            <!-- Caloric Meridian SVG -->
+            <svg viewBox="0 0 48 48" class="w-12 h-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="14" height="14" rx="4" fill="#10B981"/>
+              <rect x="26" y="8" width="14" height="14" rx="4" fill="#06B6D4"/>
+              <rect x="8" y="26" width="14" height="14" rx="4" fill="#F59E0B"/>
+              <rect x="26" y="26" width="14" height="14" rx="4" fill="#6366F1"/>
+              <circle cx="24" cy="24" r="5" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-headline font-bold text-sm tracking-tight text-slate-900">CALORIX<span class="text-cyan-500">✜</span></div>
+            <span class="text-[10px] text-slate-400">Macro Matrix</span>
+          </div>
+        </div>
+
+        <!-- Dark Surface State -->
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center text-center space-y-2">
+          <div class="w-14 h-14 flex items-center justify-center">
+            <svg viewBox="0 0 48 48" class="w-12 h-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="14" height="14" rx="4" fill="#34D399" fill-opacity="0.9"/>
+              <rect x="26" y="8" width="14" height="14" rx="4" fill="#38BDF8" fill-opacity="0.9"/>
+              <rect x="8" y="26" width="14" height="14" rx="4" fill="#FBBF24" fill-opacity="0.9"/>
+              <rect x="26" y="26" width="14" height="14" rx="4" fill="#818CF8" fill-opacity="0.9"/>
+              <circle cx="24" cy="24" r="5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-headline font-bold text-sm tracking-tight text-white">CALORIX<span class="text-cyan-400">✜</span></div>
+            <span class="text-[10px] text-slate-400">Dark Quadrant</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- App Icon & Monochrome Preview -->
+      <div class="bg-slate-50/70 border border-slate-100 rounded-2xl p-3 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <!-- iOS App Icon Preview -->
+          <div class="w-12 h-12 rounded-2xl bg-slate-900 p-2 shadow-md flex items-center justify-center border border-slate-800">
+            <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none">
+              <rect x="3" y="3" width="7.5" height="7.5" rx="2.5" fill="#10B981"/>
+              <rect x="13.5" y="3" width="7.5" height="7.5" rx="2.5" fill="#06B6D4"/>
+              <rect x="3" y="13.5" width="7.5" height="7.5" rx="2.5" fill="#F59E0B"/>
+              <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2.5" fill="#8B5CF6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-800">Telemetry Quadrant Icon</div>
+            <div class="text-[11px] text-slate-400">High Contrast Precision Grid</div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-800 text-[10px] font-bold">
+            1-BIT
+          </div>
+          <div class="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center text-[10px] font-bold">
+            1-BIT
+          </div>
+        </div>
+      </div>
+
+      <!-- Specs Footer -->
+      <div class="grid grid-cols-3 gap-2 pt-1 border-t border-slate-100 text-[11px] text-slate-500">
+        <div><span class="font-semibold text-slate-700">Grid:</span> 4-Square 8pt</div>
+        <div><span class="font-semibold text-slate-700">Radius:</span> 4px Smooth</div>
+        <div><span class="font-semibold text-slate-700">Target:</span> Analytics-first</div>
+      </div>
+    </article>
+
+    <!-- CARD 3: Concept 3 — The Hexa-Metabolic Prism -->
+    <article class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100 space-y-4">
+      <div class="flex items-start justify-between">
+        <div>
+          <span class="inline-block text-[11px] font-semibold uppercase text-brand-600 bg-brand-50 px-2 py-0.5 rounded-md">Concept 03</span>
+          <h4 class="font-headline text-lg font-bold text-slate-900 mt-1">The Hexa-Metabolic Prism</h4>
+          <p class="text-xs text-slate-500">Cellular Vitality &amp; Kinetic Delta</p>
+        </div>
+        <span class="px-2 py-1 rounded-full text-[10px] font-medium bg-slate-100 text-slate-600">
+          Alternative
+        </span>
+      </div>
+
+      <p class="text-xs text-slate-600 leading-relaxed">
+        Hexagonal geometric silhouette inspired by cellular metabolism, molecular bonds, and energy cycles. Integrates the 'C' letterform with forward kinetic acceleration.
+      </p>
+
+      <!-- Logo Display Grid -->
+      <div class="grid grid-cols-2 gap-3 pt-1">
+        <!-- Full Color on Light -->
+        <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4 flex flex-col items-center justify-center text-center space-y-2">
+          <div class="w-14 h-14 flex items-center justify-center">
+            <!-- Hex Prism SVG -->
+            <svg viewBox="0 0 48 48" class="w-12 h-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="24,4 42,14 42,34 24,44 6,34 6,14" stroke="url(#hex-grad-1)" stroke-width="4.5" stroke-linejoin="round"/>
+              <path d="M30 18L18 24L30 30" stroke="#059669" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="hex-grad-1" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#10B981"/>
+                  <stop offset="1" stop-color="#047857"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div>
+            <div class="font-headline font-bold text-sm tracking-tight text-slate-900">CALORIX<span class="text-emerald-500">▲</span></div>
+            <span class="text-[10px] text-slate-400">Hex Molecular</span>
+          </div>
+        </div>
+
+        <!-- Dark Surface State -->
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center text-center space-y-2">
+          <div class="w-14 h-14 flex items-center justify-center">
+            <svg viewBox="0 0 48 48" class="w-12 h-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="24,4 42,14 42,34 24,44 6,34 6,14" stroke="url(#hex-grad-dark)" stroke-width="4.5" stroke-linejoin="round"/>
+              <path d="M30 18L18 24L30 30" stroke="#34D399" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="hex-grad-dark" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#34D399"/>
+                  <stop offset="1" stop-color="#10B981"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div>
+            <div class="font-headline font-bold text-sm tracking-tight text-white">CALORIX<span class="text-emerald-400">▲</span></div>
+            <span class="text-[10px] text-slate-400">Dark Prism</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- App Icon & Monochrome Preview -->
+      <div class="bg-slate-50/70 border border-slate-100 rounded-2xl p-3 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <!-- iOS App Icon Preview -->
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 via-teal-700 to-slate-900 p-2 shadow-md flex items-center justify-center">
+            <svg viewBox="0 0 24 24" class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+              <polygon points="12,2 21,7 21,17 12,22 3,17 3,7"/>
+              <polyline points="15,9 9,12 15,15"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-slate-800">Prism Cellular Icon</div>
+            <div class="text-[11px] text-slate-400">Performance &amp; Tech Mark</div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-800 text-[10px] font-bold">
+            SVG
+          </div>
+          <div class="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center text-[10px] font-bold">
+            SVG
+          </div>
+        </div>
+      </div>
+
+      <!-- Specs Footer -->
+      <div class="grid grid-cols-3 gap-2 pt-1 border-t border-slate-100 text-[11px] text-slate-500">
+        <div><span class="font-semibold text-slate-700">Angles:</span> 60° Hexagon</div>
+        <div><span class="font-semibold text-slate-700">Stroke:</span> 4.5px Solid</div>
+        <div><span class="font-semibold text-slate-700">Type:</span> Kinetic Tech</div>
+      </div>
+    </article>
+
+    <!-- CARD 4: Comparative Recommendation Matrix & Verdict -->
+    <article class="bg-gradient-to-b from-white to-brand-50/40 rounded-3xl p-5 shadow-sm border border-brand-100 space-y-4">
+      <div class="flex items-center justify-between">
+        <h4 class="font-headline text-base font-bold text-slate-900">Concept Comparison Matrix</h4>
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-600 text-white">
+          Evaluation
+        </span>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-[11px] text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-200 text-slate-400 uppercase font-semibold">
+              <th class="py-2 pr-2">Criterion</th>
+              <th class="py-2 px-1 text-center text-brand-700 font-bold">C1: Bio-Arc</th>
+              <th class="py-2 px-1 text-center">C2: Meridian</th>
+              <th class="py-2 pl-1 text-center">C3: Prism</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-600">
+            <tr>
+              <td class="py-2 pr-2 font-medium text-slate-900">App Ring Synergy</td>
+              <td class="py-2 px-1 text-center text-brand-600 font-bold">★★★★★</td>
+              <td class="py-2 px-1 text-center">★★★☆☆</td>
+              <td class="py-2 pl-1 text-center">★★★☆☆</td>
+            </tr>
+            <tr>
+              <td class="py-2 pr-2 font-medium text-slate-900">16px Legibility</td>
+              <td class="py-2 px-1 text-center text-brand-600 font-bold">★★★★★</td>
+              <td class="py-2 px-1 text-center">★★★★☆</td>
+              <td class="py-2 pl-1 text-center">★★★★☆</td>
+            </tr>
+            <tr>
+              <td class="py-2 pr-2 font-medium text-slate-900">Wellness vs. Gym</td>
+              <td class="py-2 px-1 text-center text-brand-600 font-bold">Balanced</td>
+              <td class="py-2 px-1 text-center">Clinical</td>
+              <td class="py-2 pl-1 text-center">Hardcore</td>
+            </tr>
+            <tr>
+              <td class="py-2 pr-2 font-medium text-slate-900">Light &amp; Dark Harmony</td>
+              <td class="py-2 px-1 text-center text-brand-600 font-bold">Seamless</td>
+              <td class="py-2 px-1 text-center">Good</td>
+              <td class="py-2 pl-1 text-center">Good</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Final Design Verdict Banner -->
+      <div class="bg-white rounded-2xl p-4 border border-brand-200 shadow-xs space-y-2">
+        <div class="flex items-center space-x-2">
+          <div class="w-5 h-5 rounded-full bg-brand-600 text-white flex items-center justify-center text-[10px] font-bold">
+            ✓
+          </div>
+          <span class="font-headline font-bold text-xs uppercase tracking-wider text-brand-800">Final Recommendation: Concept 1</span>
+        </div>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          <strong>The Bio-Arc</strong> creates immediate cognitive connection with the in-app Energy Budget progress ring and hydration rings. It delivers superior optical clarity at standard 24px and 16px bottom nav dimensions, while anchoring the fresh emerald wellness identity.
+        </p>
+      </div>
+    </article>
+
+    <!-- FOOTER: Identity Vector Specs & Guidelines -->
+    <footer class="bg-white rounded-3xl p-5 border border-slate-100 space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <div>
+          <h5 class="font-headline text-sm font-bold text-slate-900">Vector Specifications</h5>
+          <p class="text-[11px] text-slate-400">Implementation guide for React Native &amp; SVG</p>
+        </div>
+        <span class="text-[10px] font-mono text-slate-500 bg-slate-100 px-2 py-1 rounded-md">SVG 1.1 / W3C</span>
+      </div>
+
+      <!-- Color Palette Tokens -->
+      <div class="space-y-2">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Primary Color Tokens</span>
+        <div class="grid grid-cols-4 gap-2">
+          <div class="space-y-1 text-center">
+            <div class="h-9 rounded-xl bg-[#059669] shadow-xs"></div>
+            <div class="text-[10px] font-bold text-slate-800">#059669</div>
+            <div class="text-[9px] text-slate-400">Vitality Green</div>
+          </div>
+          <div class="space-y-1 text-center">
+            <div class="h-9 rounded-xl bg-[#10b981] shadow-xs"></div>
+            <div class="text-[10px] font-bold text-slate-800">#10b981</div>
+            <div class="text-[9px] text-slate-400">Mint Pulse</div>
+          </div>
+          <div class="space-y-1 text-center">
+            <div class="h-9 rounded-xl bg-[#06b6d4] shadow-xs"></div>
+            <div class="text-[10px] font-bold text-slate-800">#06b6d4</div>
+            <div class="text-[9px] text-slate-400">Hydra Cyan</div>
+          </div>
+          <div class="space-y-1 text-center">
+            <div class="h-9 rounded-xl bg-[#0f172a] shadow-xs"></div>
+            <div class="text-[10px] font-bold text-slate-800">#0f172a</div>
+            <div class="text-[9px] text-slate-400">Charcoal Dark</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Safe Space & Guidelines Note -->
+      <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 text-[11px] text-slate-600 space-y-1.5">
+        <div class="flex items-center space-x-1.5 font-semibold text-slate-800">
+          <svg class="w-3.5 h-3.5 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>Exclusion Zone &amp; Clear Space</span>
+        </div>
+        <p class="leading-relaxed">
+          Maintain a minimum clear space equal to <strong>0.5× the mark's inner radius</strong> (12dp) on all sides. Do not rotate, distort aspect ratios, or enclose within unapproved low-contrast containers.
+        </p>
+      </div>
+
+      <div class="pt-2 flex items-center justify-between text-[11px] text-slate-400">
+        <span>CALORIX Design Systems v2.4</span>
+        <span class="text-brand-600 font-semibold">Supabase &amp; React Native Ready</span>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>

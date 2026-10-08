@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_tab" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #f8faf9;
+        color: #111827;
+      }
+      body {
+        overscroll-behavior: none;
+        -webkit-tap-highlight-color: transparent;
+        min-height: max(884px, 100dvh);
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-tint": "#059669",
+            "on-error": "#ffffff",
+            "surface-container": "#ffffff",
+            "surface-container-low": "#f9fafb",
+            "surface-container-high": "#f3f4f6",
+            "surface-container-highest": "#e5e7eb",
+            "surface-container-lowest": "#ffffff",
+            "surface": "#f8faf9",
+            "background": "#f8faf9",
+            "primary": "#059669",
+            "primary-container": "#ecfdf5",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#065f46",
+            "secondary": "#0284c7",
+            "secondary-container": "#e0f2fe",
+            "tertiary": "#7c3aed",
+            "tertiary-container": "#f5f3ff",
+            "on-surface": "#111827",
+            "on-surface-variant": "#4b5563",
+            "outline": "#9ca3af",
+            "outline-variant": "#e5e7eb",
+            "error": "#dc2626",
+            "error-container": "#fee2e2"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "margin": "1rem"
+          },
+          fontFamily: {
+            "label-lg": ["Space Grotesk"],
+            "body-sm": ["Hanken Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "headline-xl": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "label-sm": ["Space Grotesk"],
+            "metric-display": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "body-md": ["Hanken Grotesk"],
+            "metric-display-mobile": ["Space Grotesk"],
+            "headline-xl-mobile": ["Space Grotesk"],
+            "label-md": ["Space Grotesk"],
+            "body-lg": ["Hanken Grotesk"]
+          },
+          fontSize: {
+            "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "metric-display": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "metric-display-mobile": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen">
+<!-- Top App Header -->
+<header class="fixed top-0 w-full z-50 pt-safe bg-white/85 backdrop-blur-xl border-b border-gray-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.03)]">
+<div class="h-16 px-margin flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="CALORIX Brand Mark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vi2MOUzLbqR5RdZRKjj04Wi-LjqksG2mTW86-qB6rGpCovn5Tt7x60ESfrIWe2mcmcRFZhakcYRwxZOXga_X-qjvMJPoOrDd6Bp5XV6XI6U4xyyGhMybGh9SIyFBN_dTQS4YPFPlI5LYqM3N88D_f7Oru1xwubNr0Tuo_pgdVoXXAD7rScaUYDfI8qlJjitURU5PLM7LATiEalwo2vOviNbKjuS1Q7FMHVkhvYPYPUog"/>
+<span class="font-headline-md text-headline-md tracking-tight text-[#059669] font-bold">CALORIX</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-800 hover:bg-gray-100 relative rounded-full transition-colors">
+<span class="material-symbols-outlined text-[22px]">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#059669] ring-2 ring-white"></span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full transition-opacity active:opacity-80">
+<img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-gray-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwWkBySZ4F5N2r8mwiNOXA-rTGy2tE5IBBv40wWg_0fTAS5S5bSO1FX0M5RulpraB3A-k7bY2PgS73NemfR8Rj68R3Cnb_0vHFO3jV_cTg52D73gLU-aB3CS-jXRVEc-TJrEameuH_e-nwiM0Rk1VlOkxAz03ZuWdQ4PslcZcg8Agsxx--MrNl062DAZ4TOewTQ9no_YtZ7diVGdUnDg-sFrzGFgYnpBX7KRefX-LE"/>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Body Content -->
+<main class="flex flex-col relative w-full pt-20 pb-28 bg-[#f8faf9] flex-1">
+<div class="flex flex-col w-full px-margin pb-6 gap-4">
+<!-- Profile & Hero Identity Section -->
+<div class="relative overflow-hidden bg-white border border-gray-200 rounded-2xl p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col gap-4">
+<div class="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-gradient-to-br from-emerald-100/60 to-transparent blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-3.5 relative z-10">
+<div class="relative">
+<img class="w-20 h-20 rounded-full object-cover shadow-sm ring-2 ring-emerald-50" data-alt="Editorial close-up athletic portrait of Alex Vance, a fit person in late 20s wearing modern obsidian athletic wear, soft cinematic lighting with subtle mint emerald backlight reflections against a dark slate studio backdrop, high fashion fitness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWayP4eyHuQpZ44k-U4InegTC2n86CPlXVPLAjizrloTDZub6WsY5tuKQaIFNamNF88CxKcYTqG86m2T-rpm-CGkbWiJCZjqRvHBh4CiGIFCXGR41xIms1xGQCGLD375Kb2aXbQMCiWpazxCMdEn2pjf4-sgwaq53uiegNJfCtJ0Vs6WR6DTJEKfF2-wbEzVXt-feDkIgX7sWClMu7GMAyztbMXCM7_WSKdKBovqTE"/>
+<span class="absolute bottom-0 right-0 bg-[#ecfdf5] border border-emerald-200 text-[#059669] font-label-sm text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-xs flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+              PRO
+            </span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-gray-900 tracking-tight font-bold truncate">Alex Vance</h2>
+<button class="text-gray-500 hover:text-gray-800 active:scale-95 transition-all p-1.5 rounded-full bg-gray-100 hover:bg-gray-200" id="editProfileBtn">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+<span class="font-label-md text-label-md text-[#059669] font-medium mt-0.5">@alexvance</span>
+<div class="flex items-center gap-1.5 mt-1 text-gray-500">
+<span class="material-symbols-outlined text-[15px] text-gray-400">calendar_today</span>
+<span class="font-body-sm text-body-sm">Active Member since Aug 2024</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Triptych Summary Bar -->
+<div class="grid grid-cols-3 gap-2 bg-[#f8faf9] border border-gray-100 rounded-xl p-2.5">
+<div class="flex flex-col items-center justify-center text-center py-1">
+<span class="font-headline-md text-headline-md text-[#059669] font-bold">68</span>
+<span class="font-label-sm text-label-sm text-gray-500 tracking-tight mt-0.5">Days Logged</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center py-1 bg-white rounded-lg border border-gray-100 shadow-2xs">
+<span class="font-headline-md text-headline-md text-[#0284c7] font-bold">-4.2<span class="font-label-sm text-label-sm font-normal ml-0.5">kg</span></span>
+<span class="font-label-sm text-label-sm text-gray-500 tracking-tight mt-0.5">Weight Shift</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center py-1">
+<span class="font-headline-md text-headline-md text-[#7c3aed] font-bold">14</span>
+<span class="font-label-sm text-label-sm text-gray-500 tracking-tight mt-0.5">Workouts / mo</span>
+</div>
+</div>
+</div>
+<!-- CALORIX AI Nutrition Plan Spotlight Bento -->
+<div class="relative overflow-hidden bg-white border border-gray-200 rounded-2xl p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-50 border border-purple-200/70 text-purple-700">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-[10px] font-bold uppercase tracking-wider">CALORIX Neural Engine</span>
+</div>
+<span class="font-label-sm text-label-sm text-gray-500 bg-gray-100 border border-gray-200 px-2.5 py-0.5 rounded-full">v4.2 Adaptive</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-gray-500 uppercase tracking-wider font-semibold">Dynamic Protocol</span>
+<h3 class="font-headline-md text-headline-md text-gray-900 font-bold tracking-tight">Lean Recomp &amp; Metabolic Health</h3>
+<p class="font-body-sm text-body-sm text-gray-600">Calibrated automatically from continuous sleep, HR zone spikes, and daily thermic load telemetry.</p>
+</div>
+<!-- Macro Readout Targets -->
+<div class="bg-[#f8faf9] border border-gray-200/80 rounded-xl p-3.5 flex flex-col gap-2.5">
+<div class="flex items-baseline justify-between">
+<span class="font-body-md text-body-md text-gray-800 font-medium">Daily Metabolic Budget</span>
+<span class="font-metric-display-mobile text-metric-display-mobile text-[#059669] font-bold">1,850 <span class="font-label-md text-label-md font-normal text-gray-500">kcal</span></span>
+</div>
+<!-- Macro Split Segmented Bar -->
+<div class="w-full h-2 rounded-full overflow-hidden flex bg-gray-200">
+<div class="h-full bg-rose-500" style="width: 32%" title="Protein: 32%"></div>
+<div class="h-full bg-sky-500" style="width: 42%" title="Carbohydrates: 42%"></div>
+<div class="h-full bg-purple-500" style="width: 26%" title="Fats: 26%"></div>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1 text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-rose-500"></span>
+<span class="font-label-sm text-label-sm text-gray-600 font-medium">Protein</span>
+</div>
+<span class="font-label-lg text-label-lg text-gray-900 font-semibold mt-0.5">140g <span class="font-label-sm text-label-sm font-normal text-gray-500">(30%)</span></span>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-sky-500"></span>
+<span class="font-label-sm text-label-sm text-gray-600 font-medium">Carbs</span>
+</div>
+<span class="font-label-lg text-label-lg text-gray-900 font-semibold mt-0.5">185g <span class="font-label-sm text-label-sm font-normal text-gray-500">(40%)</span></span>
+</div>
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-purple-500"></span>
+<span class="font-label-sm text-label-sm text-gray-600 font-medium">Lipids</span>
+</div>
+<span class="font-label-lg text-label-lg text-gray-900 font-semibold mt-0.5">62g <span class="font-label-sm text-label-sm font-normal text-gray-500">(30%)</span></span>
+</div>
+</div>
+</div>
+<button class="w-full bg-[#f8faf9] hover:bg-gray-100 border border-gray-200 active:scale-[0.98] transition-all py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-gray-800 font-label-lg text-label-lg shadow-2xs" id="recalibrateBtn">
+<span class="material-symbols-outlined text-[#059669] text-[20px]">psychology</span>
+<span class="font-semibold">Recalibrate Plan with AI</span>
+<span class="material-symbols-outlined text-[18px] text-gray-400 ml-auto">chevron_right</span>
+</button>
+</div>
+<!-- Biometrics & Body Composition -->
+<div class="flex flex-col gap-2">
+<div class="px-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-gray-500 uppercase tracking-wider font-semibold">Health &amp; Biometrics</span>
+<span class="font-label-sm text-label-sm text-[#059669] font-medium">Measured via Smart Scale</span>
+</div>
+<div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col divide-y divide-gray-100">
+<!-- Weight Flow Target -->
+<button class="w-full p-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100/70 flex items-center justify-center text-[#059669]">
+<span class="material-symbols-outlined text-[22px]">scale</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-gray-900 font-semibold">Target Weight</span>
+<span class="font-body-sm text-body-sm text-gray-500">Weekly pace: -0.35 kg</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-gray-800 font-medium">67.2 kg</span>
+<span class="material-symbols-outlined text-[14px] text-gray-400 mx-0.5 inline align-middle">trending_flat</span>
+<span class="font-label-lg text-label-lg text-[#059669] font-bold">63.0 kg</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-gray-400">chevron_right</span>
+</div>
+</button>
+<!-- Basal Metabolic Rate -->
+<div class="w-full p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100/70 flex items-center justify-center text-[#0284c7]">
+<span class="material-symbols-outlined text-[22px]">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-gray-900 font-semibold">Basal Metabolic Rate (BMR)</span>
+<span class="font-body-sm text-body-sm text-gray-500">Harris-Benedict refined telemetry</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-gray-900 font-semibold">1,640</span>
+<span class="font-label-sm text-label-sm text-gray-500 font-medium">kcal</span>
+</div>
+</div>
+<!-- Baseline Activity -->
+<button class="w-full p-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-purple-50 border border-purple-100/70 flex items-center justify-center text-[#7c3aed]">
+<span class="material-symbols-outlined text-[22px]">fitness_center</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-gray-900 font-semibold">Activity Baseline</span>
+<span class="font-body-sm text-body-sm text-gray-500">3-4 high intensity sessions/week</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-purple-700 bg-purple-50 border border-purple-200/70 px-2.5 py-0.5 rounded-full font-medium">Moderate</span>
+<span class="material-symbols-outlined text-[20px] text-gray-400">chevron_right</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Integrations & Cloud Sync -->
+<div class="flex flex-col gap-2">
+<div class="px-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-gray-500 uppercase tracking-wider font-semibold">Integrations &amp; Cloud Sync</span>
+<span class="flex items-center gap-1 text-[11px] text-[#059669] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#059669] animate-pulse"></span> Live Stream
+          </span>
+</div>
+<div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col divide-y divide-gray-100">
+<!-- Apple Health Kit Item -->
+<div class="w-full p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-rose-50 border border-rose-100/70 flex items-center justify-center text-rose-500">
+<span class="material-symbols-outlined text-[22px]">favorite</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-gray-900 font-semibold">Apple Health</span>
+<span class="w-2 h-2 rounded-full bg-[#059669]"></span>
+</div>
+<span class="font-body-sm text-body-sm text-gray-500">Synced: Steps, Active Burn, Resting HR</span>
+</div>
+</div>
+<span class="bg-gray-100 border border-gray-200 text-gray-700 font-label-sm text-label-sm px-3 py-1.5 rounded-full font-medium">
+              Synced 4m ago
+            </span>
+</div>
+<!-- Supabase Cloud Biometric Vault -->
+<div class="w-full p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100/70 flex items-center justify-center text-[#0284c7]">
+<span class="material-symbols-outlined text-[22px]">cloud_sync</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-gray-900 font-semibold">Cloud Vault Sync</span>
+<span class="font-body-sm text-body-sm text-gray-500">End-to-end encrypted biometrics</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1 bg-sky-50 border border-sky-200/80 px-2.5 py-1 rounded-full text-[#0284c7]">
+<span class="material-symbols-outlined text-[15px]">lock</span>
+<span class="font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- App Preferences & Configuration Group -->
+<div class="flex flex-col gap-2">
+<div class="px-1">
+<span class="font-label-sm text-label-sm text-gray-500 uppercase tracking-wider font-semibold">Preferences &amp; Data</span>
+</div>
+<div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col divide-y divide-gray-100">
+<!-- Measurement Units -->
+<button class="w-full p-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gray-100 border border-gray-200/60 flex items-center justify-center text-gray-600">
+<span class="material-symbols-outlined text-[22px]">straighten</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-gray-900 font-semibold">Measurement Standard</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-gray-500">Metric (kg, ml, kcal)</span>
+<span class="material-symbols-outlined text-[20px] text-gray-400">chevron_right</span>
+</div>
+</button>
+<!-- Smart Reminders -->
+<div class="w-full p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gray-100 border border-gray-200/60 flex items-center justify-center text-gray-600">
+<span class="material-symbols-outlined text-[22px]">notifications_active</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-gray-900 font-semibold">Adaptive Nudges</span>
+<span class="font-body-sm text-body-sm text-gray-500">Smart meal &amp; hydration alerts</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="nudgesToggle" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all after:shadow-sm peer-checked:bg-[#059669]"></div>
+</label>
+</div>
+<!-- Data Export & Privacy -->
+<button class="w-full p-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gray-100 border border-gray-200/60 flex items-center justify-center text-gray-600">
+<span class="material-symbols-outlined text-[22px]">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-gray-900 font-semibold">Data Privacy &amp; Export</span>
+<span class="font-body-sm text-body-sm text-gray-500">Download raw CSV intake telemetry</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-gray-400">chevron_right</span>
+</button>
+<!-- Help Center & Concierge -->
+<button class="w-full p-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gray-100 border border-gray-200/60 flex items-center justify-center text-gray-600">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-gray-900 font-semibold">Help Center &amp; Concierge</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-[#059669] bg-[#ecfdf5] border border-emerald-200 font-semibold px-2 py-0.5 rounded-full">VIP 24/7</span>
+<span class="material-symbols-outlined text-[20px] text-gray-400">chevron_right</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Sign Out & Build Info -->
+<div class="flex flex-col items-center gap-3 pt-2">
+<button class="w-full py-3.5 px-4 rounded-xl bg-white border border-rose-200 hover:bg-rose-50/50 hover:border-rose-300 active:scale-[0.99] transition-all flex items-center justify-center gap-2 text-rose-600 font-label-lg text-label-lg shadow-2xs font-semibold" id="signOutBtn">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span>Sign Out of Account</span>
+</button>
+<div class="flex flex-col items-center gap-0.5 text-center">
+<span class="font-label-sm text-label-sm text-gray-400">CALORIX Intelligence v2.4.0 (Build 842)</span>
+<span class="font-body-sm text-body-sm text-gray-400 text-[11px]">Engineered for high performance nutrition &amp; recovery</span>
+</div>
+</div>
+<!-- Subtle Toast Notification (Hidden by default) -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 bg-gray-900 text-white border border-gray-800 px-4 py-2.5 rounded-full shadow-xl opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2 z-50" id="toastNotification">
+<span class="material-symbols-outlined text-emerald-400 text-[20px]" id="toastIcon">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Plan recalibrated successfully</span>
+</div>
+</div>
+<script>
+      (function initProfileMicroInteractions() {
+        const recalibrateBtn = document.getElementById('recalibrateBtn');
+        const toast = document.getElementById('toastNotification');
+        const toastMsg = document.getElementById('toastMessage');
+        const toastIcon = document.getElementById('toastIcon');
+        const editBtn = document.getElementById('editProfileBtn');
+        const signOutBtn = document.getElementById('signOutBtn');
+
+        function showToast(message, iconName = 'check_circle', isError = false) {
+          if (!toast) return;
+          toastMsg.textContent = message;
+          toastIcon.textContent = iconName;
+          toastIcon.className = `material-symbols-outlined text-[20px] ${isError ? 'text-rose-400' : 'text-emerald-400'}`;
+          
+          toast.classList.remove('opacity-0', 'pointer-events-none');
+          toast.classList.add('opacity-100');
+          
+          setTimeout(() => {
+            toast.classList.remove('opacity-100');
+            toast.classList.add('opacity-0', 'pointer-events-none');
+          }, 2600);
+        }
+
+        if (recalibrateBtn) {
+          recalibrateBtn.addEventListener('click', () => {
+            recalibrateBtn.classList.add('opacity-75');
+            recalibrateBtn.innerHTML = `
+              <span class="material-symbols-outlined text-[#059669] text-[20px] animate-spin">refresh</span>
+              <span class="font-semibold">Recalibrating Biometrics...</span>
+            `;
+            setTimeout(() => {
+              recalibrateBtn.classList.remove('opacity-75');
+              recalibrateBtn.innerHTML = `
+                <span class="material-symbols-outlined text-[#059669] text-[20px]">psychology</span>
+                <span class="font-semibold">Recalibrate Plan with AI</span>
+                <span class="material-symbols-outlined text-[18px] text-gray-400 ml-auto">chevron_right</span>
+              `;
+              showToast('Targets updated with recent cardio loads!', 'auto_awesome');
+            }, 1200);
+          });
+        }
+
+        if (editBtn) {
+          editBtn.addEventListener('click', () => {
+            showToast('Profile editor ready', 'account_circle');
+          });
+        }
+
+        if (signOutBtn) {
+          signOutBtn.addEventListener('click', () => {
+            showToast('Cloud session secured', 'lock');
+          });
+        }
+      })();
+    </script>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 w-full z-50 pb-safe px-margin pointer-events-none" data-active-classes="text-[#059669] font-bold">
+<div class="max-w-md mx-auto mb-4 bg-white/95 backdrop-blur-xl border border-gray-200 rounded-full px-4 py-1.5 shadow-[0_8px_24px_rgba(0,0,0,0.08)] pointer-events-auto flex items-center justify-between">
+<a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] text-gray-500 hover:text-gray-800 transition-colors" data-path="home" href="#">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+<span class="font-label-sm text-label-sm mt-0.5">Home</span>
+</a>
+<div class="relative -top-5 flex items-center justify-center">
+<a class="w-14 h-14 rounded-full bg-[#059669] flex items-center justify-center text-white shadow-[0_8px_20px_rgba(5,150,105,0.35)] active:scale-95 transition-transform min-w-[48px] min-h-[48px]" data-path="add-action-sheet" href="#">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</a>
+</div>
+<a class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] text-gray-500 hover:text-gray-800 transition-colors" data-path="progress" href="#">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+<span class="font-label-sm text-label-sm mt-0.5">Progress</span>
+</a>
+<a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] transition-colors text-[#059669] font-bold" data-path="profile" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="font-label-sm text-label-sm mt-0.5">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

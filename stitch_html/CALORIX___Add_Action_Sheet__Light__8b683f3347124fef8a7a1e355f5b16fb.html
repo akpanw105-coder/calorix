@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f8faf9;color:#111827;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#006c4a", "on-error": "#ffffff", "surface-container": "#ffffff", "on-secondary-fixed-variant": "#005236", "on-background": "#111827", "primary": "#059669", "on-tertiary-container": "#f4fffa", "inverse-on-surface": "#edf0ff", "on-secondary": "#ffffff", "outline-variant": "#e5e7eb", "on-tertiary-fixed": "#101e1a", "on-primary-fixed": "#002114", "error-container": "#ffdad6", "inverse-primary": "#68dba9", "tertiary-fixed-dim": "#bacac4", "surface-container-high": "#f3f4f6", "surface": "#f8faf9", "surface-variant": "#e5e7eb", "inverse-surface": "#293040", "on-tertiary-fixed-variant": "#3b4a45", "primary-container": "#ecfdf5", "surface-container-highest": "#e5e7eb", "tertiary-fixed": "#d5e6df", "background": "#f8faf9", "primary-fixed": "#85f8c4", "on-surface": "#111827", "surface-container-low": "#ffffff", "surface-bright": "#ffffff", "secondary-fixed-dim": "#4edea3", "tertiary-container": "#687872", "on-primary": "#ffffff", "secondary-fixed": "#6ffbbe", "primary-fixed-dim": "#68dba9", "tertiary": "#505f5a", "on-surface-variant": "#4b5563", "on-error-container": "#93000a", "secondary": "#0d9488", "surface-dim": "#f4f6f5", "on-tertiary": "#ffffff", "secondary-container": "#ccfbf1", "on-primary-fixed-variant": "#005137", "on-primary-container": "#065f46", "on-secondary-container": "#115e59", "outline": "#9ca3af", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#002113", "error": "#ba1a1a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2rem", "margin-tablet": "1.5rem", "margin": "1rem", "gutter": "1rem", "gutter-tablet": "1.25rem", "space-md": "1rem", "space-sm": "0.5rem" }, fontFamily: { "label-lg": ["Space Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Space Grotesk"], "headline-xl": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "metric-display": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "body-md": ["Hanken Grotesk"], "metric-display-mobile": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"], "label-md": ["Space Grotesk"], "body-lg": ["Hanken Grotesk"] }, fontSize: { "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "600" }], "metric-display": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "metric-display-mobile": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-[#f8faf9] font-body-md text-body-md text-[#111827] antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-[#f8faf9]/80 backdrop-blur-xl border-b border-gray-200/60 shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-gray-700 hover:text-emerald-600 transition-colors rounded-full active:bg-gray-100" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="CALORIX Brand Mark" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vi2MOUzLbqR5RdZRKjj04Wi-LjqksG2mTW86-qB6rGpCovn5Tt7x60ESfrIWe2mcmcRFZhakcYRwxZOXga_X-qjvMJPoOrDd6Bp5XV6XI6U4xyyGhMybGh9SIyFBN_dTQS4YPFPlI5LYqM3N88D_f7Oru1xwubNr0Tuo_pgdVoXXAD7rScaUYDfI8qlJjitURU5PLM7LATiEalwo2vOviNbKjuS1Q7FMHVkhvYPYPUog"/><h1 class="font-headline-sm text-headline-sm text-gray-900 pl-space-xs">Add Action Sheet</h1></div><div class="flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-emerald-500/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwWkBySZ4F5N2r8mwiNOXA-rTGy2tE5IBBv40wWg_0fTAS5S5bSO1FX0M5RulpraB3A-k7bY2PgS73NemfR8Rj68R3Cnb_0vHFO3jV_cTg52D73gLU-aB3CS-jXRVEc-TJrEameuH_e-nwiM0Rk1VlOkxAz03ZuWdQ4PslcZcg8Agsxx--MrNl062DAZ4TOewTQ9no_YtZ7diVGdUnDg-sFrzGFgYnpBX7KRefX-LE"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-[#f8faf9] flex-1"><div class="flex flex-col w-full relative min-w-0 pb-8">
+<div class="px-margin pt-space-md space-y-space-md opacity-35 pointer-events-none select-none filter blur-[1px]">
+<div class="bg-white p-space-md rounded-xl border border-gray-100 shadow-sm">
+<div class="flex justify-between items-center mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-gray-900">Daily Telemetry</span>
+<span class="font-label-sm text-label-sm text-emerald-600 font-medium">SYNCED</span>
+</div>
+<div class="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 rounded-full w-3/4"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-white p-space-md rounded-xl border border-gray-100 shadow-sm">
+<span class="font-label-sm text-label-sm text-gray-500">ENERGY IN</span>
+<p class="font-metric-display-mobile text-metric-display-mobile text-gray-900 mt-space-xs">1,840 <span class="font-body-sm text-body-sm text-gray-400">kcal</span></p>
+</div>
+<div class="bg-white p-space-md rounded-xl border border-gray-100 shadow-sm">
+<span class="font-label-sm text-label-sm text-gray-500">TARGET BURN</span>
+<p class="font-metric-display-mobile text-metric-display-mobile text-teal-600 mt-space-xs">520 <span class="font-body-sm text-body-sm text-gray-400">kcal</span></p>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-40 bg-gray-900/30 backdrop-blur-sm transition-opacity duration-300 flex flex-col justify-end" id="modalBackdrop">
+<div class="w-full max-w-lg mx-auto bg-white rounded-t-[28px] border-t border-gray-100 shadow-[0_-10px_30px_rgba(0,0,0,0.06)] p-space-md space-y-space-md flex flex-col max-h-[813px] overflow-y-auto">
+<div class="w-12 h-1 bg-gray-200 rounded-full mx-auto -mt-1 opacity-80"></div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+<h2 class="font-headline-sm text-headline-sm text-[#111827]">Quick Log &amp; Capture</h2>
+</div>
+<button aria-label="Close modal" class="w-10 h-10 rounded-full bg-[#f3f4f6] text-[#374151] hover:text-emerald-700 hover:bg-gray-200 flex items-center justify-center transition-all duration-150 active:scale-95" id="closeModalBtn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<button class="w-full text-left bg-white hover:bg-emerald-50/40 border border-gray-200/80 hover:border-emerald-200 transition-all duration-200 active:scale-[0.99] p-space-md rounded-xl flex items-center gap-space-md group shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-[#ecfdf5] text-[#059669] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[24px]">restaurant</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-[#111827] group-hover:text-emerald-700 transition-colors">Log Food</span>
+<span class="font-label-sm text-label-sm text-[#059669] px-2 py-0.5 rounded-full bg-[#ecfdf5] border border-emerald-100">2M+ DB</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4b5563] truncate mt-0.5">Search our verified database of 2M+ whole foods and meals</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-[20px] shrink-0 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</button>
+<button class="w-full text-left bg-white hover:bg-emerald-50/40 border border-gray-200/80 hover:border-emerald-200 transition-all duration-200 active:scale-[0.99] p-space-md rounded-xl flex items-center gap-space-md group shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-[#ecfdf5] text-[#059669] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[24px]">document_scanner</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-[#111827] group-hover:text-emerald-700 transition-colors">Scan Food / Barcode</span>
+<span class="font-label-sm text-label-sm text-teal-700 px-2 py-0.5 rounded-full bg-teal-50 border border-teal-100">AI Vision</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4b5563] truncate mt-0.5">Point camera at any barcode or plate for instant AI nutrient breakdown</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-[20px] shrink-0 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</button>
+<button class="w-full text-left bg-white hover:bg-emerald-50/40 border border-gray-200/80 hover:border-emerald-200 transition-all duration-200 active:scale-[0.99] p-space-md rounded-xl flex items-center gap-space-md group shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-[#ecfdf5] text-[#059669] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[24px]">fitness_center</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-[#111827] group-hover:text-emerald-700 transition-colors">Log Exercise</span>
+<span class="font-label-sm text-label-sm text-gray-600 px-2 py-0.5 rounded-full bg-gray-100">Auto-sync</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4b5563] truncate mt-0.5">Record workouts, cardio, strength, or sync fitness tracker</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-[20px] shrink-0 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</button>
+<button class="w-full text-left bg-white hover:bg-emerald-50/40 border border-gray-200/80 hover:border-emerald-200 transition-all duration-200 active:scale-[0.99] p-space-md rounded-xl flex items-center gap-space-md group shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-[#ecfdf5] text-[#059669] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[24px]">water_drop</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-[#111827] group-hover:text-emerald-700 transition-colors">Add Water</span>
+<div class="flex gap-1">
+<span class="font-label-sm text-label-sm text-teal-700 px-1.5 py-0.5 rounded-md bg-teal-50 border border-teal-100/60">+250ml</span>
+<span class="font-label-sm text-label-sm text-teal-700 px-1.5 py-0.5 rounded-md bg-teal-50 border border-teal-100/60">+500ml</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-[#4b5563] truncate mt-0.5">Quick log hydration (+250ml, +500ml, custom glass)</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-[20px] shrink-0 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</button>
+<button class="w-full text-left bg-white hover:bg-emerald-50/40 border border-gray-200/80 hover:border-emerald-200 transition-all duration-200 active:scale-[0.99] p-space-md rounded-xl flex items-center gap-space-md group shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-[#ecfdf5] text-[#059669] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-[24px]">bookmark_heart</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-[#111827] group-hover:text-emerald-700 transition-colors">Food Database &amp; Favorites</span>
+<span class="font-label-sm text-label-sm text-emerald-700 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-100">Saved</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#4b5563] truncate mt-0.5">Browse saved meals, custom recipes, and frequent quick-adds</p>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-[20px] shrink-0 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</button>
+</div>
+<div class="pt-space-xs">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-[#4b5563] uppercase tracking-wider font-semibold">Frequent Quick-Adds</span>
+<span class="font-label-sm text-label-sm text-gray-400 font-medium">1-TAP ADD</span>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 -mx-space-md px-space-md scrollbar-none">
+<button class="quick-chip shrink-0 bg-gray-50 hover:bg-emerald-50/50 border border-gray-200/70 active:scale-95 px-3 py-2 rounded-xl flex items-center gap-2 transition-all shadow-2xs">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="font-label-md text-label-md text-[#111827]">Oatmeal + Scoop</span>
+<span class="font-label-sm text-label-sm text-gray-400">380k</span>
+</button>
+<button class="quick-chip shrink-0 bg-gray-50 hover:bg-emerald-50/50 border border-gray-200/70 active:scale-95 px-3 py-2 rounded-xl flex items-center gap-2 transition-all shadow-2xs">
+<span class="w-2 h-2 rounded-full bg-teal-500"></span>
+<span class="font-label-md text-label-md text-[#111827]">Black Coffee</span>
+<span class="font-label-sm text-label-sm text-gray-400">5k</span>
+</button>
+<button class="quick-chip shrink-0 bg-gray-50 hover:bg-emerald-50/50 border border-gray-200/70 active:scale-95 px-3 py-2 rounded-xl flex items-center gap-2 transition-all shadow-2xs">
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+<span class="font-label-md text-label-md text-[#111827]">Protein Bar</span>
+<span class="font-label-sm text-label-sm text-gray-400">210k</span>
+</button>
+<button class="quick-chip shrink-0 bg-gray-50 hover:bg-emerald-50/50 border border-gray-200/70 active:scale-95 px-3 py-2 rounded-xl flex items-center gap-2 transition-all shadow-2xs">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="font-label-md text-label-md text-[#111827]">Banana</span>
+<span class="font-label-sm text-label-sm text-gray-400">105k</span>
+</button>
+</div>
+</div>
+<div class="pt-space-xs">
+<button class="w-full h-12 bg-gray-100 hover:bg-gray-200/80 active:scale-[0.98] rounded-xl text-gray-700 font-label-lg text-label-lg transition-all flex items-center justify-center font-medium" id="cancelModalBtn">
+          Dismiss
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const backdrop = document.getElementById('modalBackdrop');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const cancelBtn = document.getElementById('cancelModalBtn');
+    const chips = document.querySelectorAll('.quick-chip');
+
+    function dismissModal() {
+      if (backdrop) {
+        backdrop.classList.add('opacity-0');
+        backdrop.classList.add('pointer-events-none');
+        setTimeout(() => {
+          if (history.length > 1) {
+            history.back();
+          }
+        }, 220);
+      }
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', dismissModal);
+    if (cancelBtn) cancelBtn.addEventListener('click', dismissModal);
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', function() {
+        const originalText = this.innerHTML;
+        this.innerHTML = '<span class="material-symbols-outlined text-[16px] text-emerald-600">check</span><span class="font-label-md text-label-md text-emerald-700">Logged</span>';
+        setTimeout(() => {
+          dismissModal();
+        }, 400);
+      });
+    });
+  })();
+</script></main></body></html>
